@@ -34,7 +34,9 @@ app.get('/',function(req,res){
     
 });
 
-
+app.post('/create-contact',function(req,res){
+    return res.render('practice');
+})
 
 
 app.listen(port, function(err){
