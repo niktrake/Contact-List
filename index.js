@@ -8,6 +8,7 @@ const app=express();
 
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
+app.use(express.urlencoded());
 
 
 
@@ -35,7 +36,8 @@ app.get('/',function(req,res){
 });
 
 app.post('/create-contact',function(req,res){
-    return res.render('practice');
+    contactList.push(req.body);
+    return res.redirect('back');
 })
 
 
