@@ -10,9 +10,26 @@ app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
 
 
+
+var contactList = [
+    {
+        name:"Nikhil",
+        phone:"111111111"
+    },
+    {
+        name:"Buffalo",
+        phone:"9729771150"
+    }
+]
+
+
+
+
+
 app.get('/',function(req,res){
     return res.render('home',{
-        title:"My Contacts List"
+        title:"My Contacts List",
+        contact_list: contactList
     });
     
 });
