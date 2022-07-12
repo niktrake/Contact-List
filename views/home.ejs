@@ -5,20 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
-    <h1>Contact List</h1>
-    <ul>
-        <% for(let i of contact_list){ %>
-            <li>
-                <p><%= i.name %></p>
-                <p><%= i.phone %></p>
-            </li>
+    <h1 id="page-heading">
+        <i class="fa-solid fa-address-book"></i>
+        Contact List
+    </h1>
+    <div id="contacts">
+        <ul>
+            <% for(let i of contact_list){ %>
+                <li>
+                    <div id="details">
+                        <p id="name"><%= i.name %></p>
+                        <p id="phone"><%= i.phone %></p>
+                    </div>
+                </li>
+    
+            <% } %>
+        </ul>
+    </div>
 
-        <% } %>
-    </ul>
-
-    <div>
+    <div id="fill-up-form">
         <form action="/create-contact" method="post">
             <input type="text" name="name" placeholder="Enter Name">
             <input type="number" name="phone" placeholder="Enter Phone Number">
@@ -27,6 +36,6 @@
     </div>
 
 
-
+    <script type="text/javascript" src="/js/home.js"></script>
 </body>
 </html>

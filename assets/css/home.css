@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#page-heading{
+    text-align: center;
+    margin-top: 25px;
+    color: gray;
+}
+
+
+#contacts{
+    position: relative;
+    left: 31%;
+    /* border: 1px solid red;  */
+    width: 65vh;
+    height: auto;
+    
+}
+ul{
+    margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li{
+    /* border: 1px solid red; */
+    padding: 4px;
+    text-align: center;
+    margin-bottom: 5px;
+    background-color: cadetblue;
+}
+
+li:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+
+#details{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    color: white;
+}
+
+#fill-up-form{
+    position: relative;
+    left: 31%;
+}
+
+form input{
+    font-size: 1.2rem;
+}
