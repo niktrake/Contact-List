@@ -13,9 +13,9 @@ body{
 #contacts{
     position: relative;
     left: 31%;
-    /* border: 1px solid red;  */
     width: 65vh;
     height: auto;
+    
     
 }
 ul{
@@ -26,6 +26,7 @@ ul{
 
 li{
     /* border: 1px solid red; */
+    display: block;
     padding: 4px;
     text-align: center;
     margin-bottom: 5px;
@@ -42,6 +43,7 @@ li:hover{
     justify-content: space-between;
     font-size: 1.3rem;
     color: white;
+    width: 90%;
 }
 
 #fill-up-form{
@@ -50,5 +52,25 @@ li:hover{
 }
 
 form input{
+    font-size: 1.2rem;
+}
+
+.delete-button{
+    position: relative;
+    margin-right: 10px;
+    border: 1px solid red;
+    min-height: 12px;
+    overflow: hidden;
+    width: 10%;
+    text-align: center;
+    
+    
+}
+
+/* .delete-button a{
+
+} */
+.delete-button a i{
+    color: lightgoldenrodyellow;
     font-size: 1.2rem;
 }

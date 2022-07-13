@@ -21,6 +21,11 @@
                         <p id="name"><%= i.name %></p>
                         <p id="phone"><%= i.phone %></p>
                     </div>
+                    <div class="delete-button">
+                        <a href="/delete-contact/?phone=<%= i.phone %>">
+                            <i class="fa-solid fa-dumpster"></i>
+                        </a>
+                    </div>
                 </li>
     
             <% } %>
