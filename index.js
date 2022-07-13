@@ -2,6 +2,8 @@ const express=require('express');
 const port=8000;
 const path=require('path');
 
+
+const db = require('./config/mongoose');
 //using express as a function through app
 const app=express();
 
