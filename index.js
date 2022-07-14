@@ -87,13 +87,20 @@ app.post('/create-contact',function(req,res){
 //for deleting a contact
 app.get('/delete-contact',function(req,res){
     
-    let phone=req.query.phone;
+    //getting id from the url
+    let id=req.query.id;
 
-    let contactIndex=contactList.findIndex(contact => contact.phone == phone);
-    if(contactIndex!=-1){
-        contactList.splice(contactIndex,1);
-    }
-    return res.redirect('back');
+    //find the contact in the databse and delete it
+    Contact.findByIdAndDelete(id, function(err){
+        if(err){
+            console.log("Error in deleting the contact");
+            return;
+        }
+
+        return res.redirect('back');
+
+    });
+    
 
 });
 
