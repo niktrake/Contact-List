@@ -49,10 +49,21 @@ var contactList = [
 
 
 app.get('/',function(req,res){
-    return res.render('home',{
-        title:"My Contacts List",
-        contact_list: contactList
+
+    Contact.find({}, function(err,contacts){
+        if(err){
+            console.log("Error in fetching the contacts",err);
+            return;
+        }
+        return res.render('home',{
+            title:"My Contacts List",
+            contact_list: contacts
+        });
+
     });
+
+
+    
     
 });
 
