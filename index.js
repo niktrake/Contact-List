@@ -57,8 +57,19 @@ app.get('/',function(req,res){
 });
 
 app.post('/create-contact',function(req,res){
-    contactList.push(req.body);
-    return res.redirect('back');
+    // contactList.push(req.body);
+    Contact.create({
+        name: req.body.name,
+        phone: req.body.phone
+    },function(err, newContact){
+        if(err){
+            console.log("Error in creating a contact",err);
+            return;
+        }
+        console.log('*********', newContact);
+        return res.redirect('back');
+    })
+    
 })
 
 
